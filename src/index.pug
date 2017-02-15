@@ -1,8 +1,713 @@
 doctype html
-html(lang = 'ja')
+html(lang='ja')
   head
-    meta(charset = 'utf-8')
-    link(href = "css/test.css"  media = "all" rel = "stylesheet")
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='title', content='davis portfolio')
+    meta(name='viewport', content='width=device-width')
+    meta(name='description', content='ダンス関連のものを簡単に纏めてみました。本業に差し支えない範囲で、こっそりやっております。')
+    meta(property='og:title', content='davis portfolio')
+    meta(property='og:url', content='http://davispf.xyz')
+    meta(property='og:description', content='ダンス関連のものを簡単に纏めてみました。本業に差し支えない範囲で、こっそりやっております。')
+    meta(property='og:image', content='http://davispf.xyz/img/davispf_og.jpg')
+    title davis portfolio
+    link(rel='icon', href='img/davis.ico', type='image/vnd.microsoft.icon')
+    link(rel='stylesheet', type='text/css', href='css/jquery.fullPage.css')
+    link(rel='stylesheet', type='text/css', href='css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='css/animate.min.css')
+    link(rel='stylesheet', type='text/css', href='css/custom.css')
+    link(rel='stylesheet', type='text/css', href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js')
+    script(type='text/javascript', src='js/vendors/jquery.slimscroll.min.js')
+    script(type='text/javascript', src='js/jquery.fullPage.min.js')
+    script(type='text/javascript', src='js/scroll.js')
+    script(type='text/javascript', src='js/bootstrap.min.js')
+    // fullPage.js
+    script(type='text/javascript').
+      $(document).ready(function() {
+      $('#fullpage').fullpage({
+      anchors: ['forSIGNAL', 'forSSS', 'forHouseLab', 'forTAIKI', 'forOmichi','forVA'],
+      navigationTooltips: ['forSIGNAL', 'forSuper☆Super☆Super', 'forHouseLab', 'forTAIKI', 'forOmichi','forVariousArtists'],
+      sectionsColor: ['#000', '#000', '#000', '#000', '000', '#000'],
+      navigation: true,
+      navigationPosition: 'right',
+      slidesNavigation: true,
+      loopTop: true,
+      loopBottom: true,
+      controlArrows: false,
+      showActiveTooltip: false
+      });
+      });
+    // GA
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-72735224-1', 'auto');
+      ga('send', 'pageview');
   body
-    tag1
-  script(src = './app.bundle.js')
+    // title
+    nav.navbar-fixed-top
+      p.navbar-brand.animated.bounceInDown.delay_5s.dur_2s
+        img(src='img/davispf_bnr.gif', alt='davis_portfolio')
+    // loading
+    .load.animated.bounceOut.delay_5s.dur_5s
+      .row
+        .col-xs-12
+          img(src='img/davispf_bnr.png', alt='davis_portfolio', width='200px')
+          p.animated.pulse.infinite loading...
+    // Index
+    nav#sec_Index.panel-collapse.collapse
+      .index
+        .animated.bounceInDown
+          .row
+            p index
+            hr
+            .col-xs-12.col-sm-6.col-md-4.bnr
+              a(href='#forSIGNAL')
+                img(src='img/bnr/signal_bnr.jpg', alt='Signal')
+            .col-xs-12.col-sm-6.col-md-4.bnr
+              a(href='#forSSS')
+                img(src='img/bnr/sss_bnr.jpg', alt='sss')
+            .col-xs-12.col-sm-6.col-md-4.bnr
+              a(href='#forHouseLab')
+                img(src='img/bnr/houselab_bnr.jpg', alt='houselab')
+            .col-xs-12.col-sm-6.col-md-4.bnr
+              a(href='#forTAIKI')
+                img(src='img/bnr/taiki_bnr.jpg', alt='taiki')
+            .col-xs-12.col-sm-6.col-md-4.bnr
+              a(href='#forOmichi')
+                img(src='img/bnr/omichi_bnr.jpg', alt='omichi')
+            .col-xs-12.col-sm-6.col-md-4.bnr
+              a(href='#forVA')
+                img(src='img/bnr/va_bnr.jpg', alt='va')
+            br
+            .col-xs-6.hidden-vxs
+              br
+              p profile
+              hr
+              p
+                strong "ハウスダンス"
+                | が趣味の人。本業はSE。
+                br
+                | 							ダンスの知人に"davis"と呼ばれてまして
+                br
+                | 							ココに掲載しているのはその関連のものです。
+                br
+                br
+                | 							よろしくどうぞ
+            .col-xs-6
+              p.hidden-vxs
+                a.twitter-timeline(href='https://twitter.com/houserdavis', height='200px', lang='eg', data-chrome='nofooter', data-widget-id='697240666397511681') @houserdavisさんのツイート
+                script.
+                  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+            .col-xs-12.hidden-sm.hidden-md.hidden-lg
+              p
+                | profile
+                i.animated.swing.infinite.fa.fa-repeat.fa-lg.fa-fw
+            .col-xs-12
+              a(href='https://www.facebook.com/kosuke.ohata.3', target='_blank')
+                i.fa.fa-facebook-square.fa-2x.fa-fw.animated-hover
+              a(href='mailto:ohata.k.ec@gmail.com?subject=davisへの問い合わせ&')
+                i.fa.fa-envelope-square.fa-2x.fa-fw.animated-hover
+              p ©2016_davis
+              br
+              a(data-toggle='collapse', data-parent='#accordion', href='#sec_Index')
+                | close
+                i.fa.fa-times.fa-lg.fa-fw.animated-hover
+    // profile :only rotate by smp
+    .profile.visible-xs.hidden-vxs
+      .profile_.animated.bounceInDown
+        .col-xs-6
+          h3 profile
+          hr
+          p
+            strong "ハウスダンス"
+            | が趣味の人。本業はSE。
+            br
+            | 					ダンスの知人に"davis"と呼ばれてまして
+            br
+            | 					ココに掲載しているのはその関連のものです。
+            br
+            br
+            | 					よろしくどうぞ
+          p.animated.swing.infinite
+            | portfolio
+            i.fa.fa-undo.fa-lg.fa-fw
+        .col-xs-6
+          p
+            a.twitter-timeline(href='https://twitter.com/houserdavis', height='200px', lang='eg', data-chrome='nofooter', data-widget-id='697240666397511681') @houserdavisさんのツイート
+            script.
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    // contents
+    #fullpage.visible-vxs.hidden-xs
+      // for SIGNAL
+      #sec_Signal.section
+        // First Slide: "SIGNAL"
+        #slide0.slide
+          .container-xs
+            .col-xs-12
+              p
+                strong 毎月第4日曜
+                a(href='http://www.ance.jp/', target='new') @代々木ANCE
+              img(src='img/signal/signal_logo.png', alt='logo', width='200px')
+              p
+                strong ハウス好き
+                | をキーワードに、
+                br
+                | 							踊りのうまい下手ジャンル関係なく
+                br
+                | 							お酒片手に踊って楽しめる空間。
+                br
+                | 							そんな原点的な場所、signal...
+                br
+        // insert latest:
+        // SIGNAL #106
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/signal/106.jpg', target='new')
+                img.img-thumbnail(src='img/signal/106.jpg', alt='#106')
+              p
+                strong Signal vol.106
+        // SIGNAL #105
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/signal/105.jpg', target='new')
+                img.img-thumbnail(src='img/signal/105.jpg', alt='#105')
+              p
+                strong Signal vol.105
+        // SIGNAL #104
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/signal/104.jpg', target='new')
+                img.img-thumbnail(src='img/signal/104.jpg', alt='#104')
+              p
+                strong Signal vol.104
+        // SIGNAL #103
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/signal/103.jpg', target='new')
+                img.img-thumbnail(src='img/signal/103.jpg', alt='#103')
+              p
+                a(href='https://www.facebook.com/events/481220832076008/', target='new')
+                  strong Signal vol.103
+                  i.fa.fa-facebook-square.fa-lg.fa-fw.animated-hover
+        // SIGNAL #102
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/signal/102.jpg', target='new')
+                img.img-thumbnail(src='img/signal/102.jpg', alt='#102')
+              p
+                a(href='https://www.facebook.com/events/1715273295380060/', target='new')
+                  strong Signal vol.102
+                  i.fa.fa-facebook-square.fa-lg.fa-fw.animated-hover
+        // SIGNAL #101
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/signal/101.jpg', target='new')
+                img.img-thumbnail(src='img/signal/101.jpg', alt='#101')
+              p
+                a(href='https://www.facebook.com/events/1562984470692955/', target='new')
+                  strong Signal vol.101
+                  i.fa.fa-facebook-square.fa-lg.fa-fw.animated-hover
+        //
+          <div class="slide" >
+          <div class="container">
+          <div class="col-xs-12 col-sm-6">
+          <iframe class="img-thumbnail" src="https://www.youtube.com/embed/AQqOmyGNv8o?list=PL02EtzYP5EDPhSxfVDj3VRKuTe8C1Moyp" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+          <p><strong>Signal crew<br>(YANMA、祥子、ryosuke、davis)</strong><br>2015.12.19 PARTNER Vol.14@新宿FACE</p>
+          </div>
+          </div>
+          </div>
+        // 8aniv_T"
+        #slide2.slide
+          .container-xs
+            .col-xs-12
+              a(href='img/signal/8aniv_T.jpg', target='new')
+                img.img-thumbnail(src='img/signal/8aniv_T.jpg', alt='8aniv_T')
+              p
+                strong Signal 8thAniv T-shirt
+              p for ANCESTOR2015 "signal crew"
+        // 7aniv_T
+        #slide2.slide
+          .container-xs
+            .col-xs-12
+              p
+                a(href='img/signal/7aniv_T.jpg', target='new')
+                  img.img-thumbnail(src='img/signal/7aniv_T.jpg', alt='7aniv_T')
+              p
+                strong Signal 7thAniv T-shirt
+              p
+      // for SSS
+      #sec_SSS.section
+        // SSS
+        #slide0.slide
+          .container-xs
+            .col-xs-12
+              p
+                | for SUPER☆SUPER☆SUPER
+        // insert latest:
+        // sss07
+        .slide
+          .container-xs
+            .col-xs-12
+              p
+                a(href='img/sss/sss07joint.jpg', target='new')
+                  img.img-thumbnail(src='img/sss/sss07joint.jpg', alt='sss06')
+              p
+                | 2016.5.08(sun)
+                br
+                strong SUPER☆SUPER☆SUPER vol.7 3rdAnniversay
+                br
+                | @渋谷atom
+              p
+        // sss06
+        .slide
+          .container-xs
+            .col-xs-12
+              p
+                a(href='img/sss/sss06joint.jpg', target='new')
+                  img.img-thumbnail(src='img/sss/sss06joint.jpg', alt='sss06')
+              p
+                | 2015.11.15(sun)
+                br
+                strong SUPER☆SUPER☆SUPER vol.6
+                br
+                | @渋谷atom
+              p
+        // 1st Slide: "sss05"
+        .slide
+          .container-xs
+            .col-xs-6
+              a(href='img/sss/sss05f.jpg', target='new')
+                img.img-thumbnail(src='img/sss/sss05f.jpg', alt='sss05f')
+            .col-xs-6
+              a(href='img/sss/sss05b.jpg', target='new')
+                img.img-thumbnail(src='img/sss/sss05b.jpg', alt='sss05b')
+            .text-center
+              p
+                | 2015.5.10(sun)
+                br
+                strong SUPER☆SUPER☆SUPER vol.5
+                br
+                | @渋谷O-WEST
+      // for HouseLab.
+      #sec_Houselab.section
+        // "houselab."
+        .slide
+          .container-xs
+            .col-xs-12
+              img(src='img/houselab/house★lab_map.jpg', alt='lab_map', style='width: 50%')
+              p
+                strong HouseLab.
+                a(href='https://www.facebook.com/HOUSELAB.web/', target='new')
+                  i.fa.fa-facebook-square.fa-lg.fa-fw.animated-hover
+              p ダンスに本気な大人の深夜練習会
+              p
+                | 毎月第２第４土曜日 24:00~29:00 
+                br
+                a(href='http://accestudio.com/pc/contents/access/access.html', target='new') @高田馬場ACCEstudio
+        // "houselab.PARTY#6"
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/houselab/flyer/labparty_06.jpg', target='new')
+                img.img-thumbnail(src='img/houselab/flyer/labparty_06.jpg', alt='labparty_06')
+              p
+                | 2015.11.29(sun)
+                strong HouseLab.PARTY #6
+                br
+                a(href='http://www.ance.jp/', target='new') @代々木ANCE
+        // "houselab.PARTY#5"
+        .slide
+          .container-xs
+            .col-vxs-12
+              a(href='img/houselab/flyer/labparty_05.jpg', target='new')
+                img.img-thumbnail(src='img/houselab/flyer/labparty_05.jpg', alt='labparty_05', width='50%')
+              p
+                | 2015.5.31(sun)
+                br
+                strong HouseLab.PARTY #5
+                br
+                a(href='http://www.ance.jp/', target='new') @代々木ANCE
+        // labT_03
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/houselab/labT/labT_03_ppl.jpg', target='new')
+                img.img-thumbnail(src='img/houselab/labT/labT_03_ppl.jpg', alt='labT_03_ppl')
+            .text-center
+              p
+                | 2014.summer
+                br
+                strong HouseLab.T-shirt #3 swim in the club
+        // "houselab.PARTY#4"
+        .slide
+          .container-xs
+            .col-xs-6
+              a(href='img/houselab/flyer/labparty_04b.jpg', target='new')
+                img.img-thumbnail(src='img/houselab/flyer/labparty_04b.jpg', alt='labparty_04b')
+            .col-xs-6
+              a(href='img/houselab/flyer/labparty_04f.jpg', target='new')
+                img.img-thumbnail(src='img/houselab/flyer/labparty_04f.jpg', alt='labparty_04f')
+            .text-center
+              p
+                | 2014.11.30(sun)
+                strong HouseLab.PARTY #4
+                br
+                a(href='http://www.ance.jp/', target='new') @代々木ANCE
+        // "houselab.labT_02"
+        .slide
+          .container-xs
+            .col-xs-6
+              a(href='img/houselab/labT/labT_02_grn.jpg', target='new')
+                img.img-thumbnail(src='img/houselab/labT/labT_02_grn.jpg', alt='labT_02_grn')
+              p
+                | 2013.9
+                br
+                strong HouseLab.T-shirt #2 re-birth
+            .col-xs-6
+              a(href='img/houselab/labT/labT_02_crm.jpg', target='new')
+                img.img-thumbnail(src='img/houselab/labT/labT_02_crm.jpg', alt='labT_02_crm')
+              p
+                | for 
+                strong
+                  | taro number 
+                  br
+                  | @2014 ZuttoDanceStudio発表会
+        // "houselab.PARTY#2"
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/houselab/flyer/labparty_02.jpg', target='new')
+                img.img-thumbnail(src='img/houselab/flyer/labparty_02.jpg', alt='labparty_02', width='50%')
+              p
+                | 2014.3.30(sun)
+                br
+                strong HouseLab.PARTY #2
+                br
+                a(href='http://www.ance.jp/', target='new') @代々木ANCE
+        // lab3aniv_T
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/houselab/labT/lab3aniv_T.jpg', target='new')
+                img.img-thumbnail(src='img/houselab/labT/lab3aniv_T.jpg', alt='lab3aniv_T')
+            .text-center
+              p
+                | 2013.9
+                br
+                strong HouseLab. 3rdAniv T-shirt
+        // labT_01
+        .slide
+          .container-xs
+            .col-xs-6
+              a(href='img/houselab/labT/labT_01_grn.jpg', target='new')
+                img.img-thumbnail(src='img/houselab/labT/labT_01_grn.jpg', alt='grn')
+            .col-xs-6
+              a(href='img/houselab/labT/labT_01_red_w.jpg', target='new')
+                img.img-thumbnail(src='img/houselab/labT/labT_01_red_w.jpg', alt='blue')
+            .text-center
+              p
+                | 2013.9
+                br
+                strong HouseLab.T-shirt #1 landscape
+      // for TAIKI
+      #sec_TAIKI.section
+        .slide
+          .text-center
+            p
+              | for 
+              strong TAIKI
+              a(href='https://www.facebook.com/taiki.rephf.jp/?fref=ts', target='new')
+                i.fa.fa-facebook-square.fa-lg.fa-fw.animated-hover
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/va/taiki/hdc_cross_T.jpg', target='new')
+                img.img-thumbnail(src='img/va/taiki/hdc_cross_T.jpg', alt='hdc_cross_T')
+              p
+                | for
+                strong  TAIKI
+                br
+                | 2014.3 HouseDanceCrossing@川崎CHITTA
+        .slide
+          .container-xs
+            .col-xs-6
+              a(href='img/va/taiki/cross_Tf.jpg', target='new')
+                img.img-thumbnail(src='img/va/taiki/cross_Tf.jpg', alt='cross_Tf')
+            .col-xs-6
+              a(href='img/va/taiki/cross_Tb.jpg', target='new')
+                img.img-thumbnail(src='img/va/taiki/cross_Tb.jpg', alt='cross_Tb')
+            .text-center
+              p
+                | for
+                strong  TAIKI & Omichi
+                br
+                | 2014.3
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/va/taiki/taiki_zds2013_T.jpg', target='new')
+                img.img-thumbnail(src='img/va/taiki/taiki_zds2013_T.jpg', alt='taiki_zds2013_T')
+              p
+                | for
+                strong  TAIKI
+                br
+                | 2013 ZuttoDanceStudio発表会
+      // for Omichi
+      #sec_Omichi.section
+        .slide
+          .text-center
+            p
+              | for 
+              strong Omichi
+        // omichi07_T
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/va/omichi/omichi07_T.png', target='new')
+                img.img-thumbnail(src='img/va/omichi/omichi07_T.png', alt='omichi07_T')
+            .text-center
+              p
+                | for
+                strong  Omichi 
+                br
+                | 2016.5
+        // omichi06_T
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/va/omichi/omichi06_T.png', target='new')
+                img.img-thumbnail(src='img/va/omichi/omichi06_T.png', alt='omichi06_T')
+            .text-center
+              p
+                | for
+                strong  Omichi 
+                br
+                | 2016.5
+        // omichi05_T
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/va/omichi/omichi05_T.png', target='new')
+                img.img-thumbnail(src='img/va/omichi/omichi05_T.png', alt='omichi04_T')
+            .text-center
+              p
+                | for
+                strong  Omichi 
+                br
+                | 2016.4
+        // omichi04_T
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/va/omichi/omichi04_T.jpg', target='new')
+                img.img-thumbnail(src='img/va/omichi/omichi04_T.jpg', alt='omichi04_T')
+            .text-center
+              p
+                | for
+                strong  Omichi 
+                br
+                | 2016.1
+        // lady_yellow_T
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/va/omichi/lady_yellow_T.jpg', target='new')
+                img.img-thumbnail(src='img/va/omichi/lady_yellow_T.jpg', alt='lady_yellow_T')
+            .text-center
+              p
+                | for
+                strong  Omichi 
+                br
+                | 2014.7
+        // omichi_zds2015_T
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/va/omichi/omichi_zds2015_T.jpg', target='new')
+                img.img-thumbnail(src='img/va/omichi/omichi_zds2015_T.jpg', alt='omichi_zds2015_T')
+            .text-center
+              p
+                | for
+                strong  Omichi 
+                br
+                | 2014.5 ZuttoDanceStudio発表会
+        // taiki_omichi02_T
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/va/omichi/taiki_omichi02_Tfront.jpg', target='new')
+                img.img-thumbnail(src='img/va/omichi/taiki_omichi02_Tfront.jpg', alt='taiki_omichi02_Tfront')
+            .text-center
+              p
+                | for
+                strong  TAIKI & Omichi
+                br
+                | 2014.9
+        // omichi03
+        .slide
+          .container-xs
+            .col-xs-6
+              a(href='img/va/omichi/omichi_03_c_blue_T.jpg', target='new')
+                img.img-thumbnail(src='img/va/omichi/omichi_03_c_blue_T.jpg', alt='omichi_03_c_blue_T')
+            .col-xs-6
+              a(href='img/va/omichi/omichi_03_c_white_T.jpg', target='new')
+                img.img-thumbnail(src='img/va/omichi/omichi_03_c_white_T.jpg', alt='omichi_03_c_white_T')
+            .text-center
+              p
+                | for
+                strong  Omichi
+                br
+                | 2014.11
+        // omichi02
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/va/omichi/omichi_02_blackT.jpg', target='new')
+                img.img-thumbnail(src='img/va/omichi/omichi_02_blackT.jpg', alt='omichi_02_blackT')
+            .text-center
+              p
+                | for
+                strong  Omichi
+                br
+                | 2014.9
+        // omichi01
+        .slide
+          .container-xs
+            .col-xs-6
+              a(href='img/va/omichi/omichi01.jpg', target='new')
+                img.img-thumbnail(src='img/va/omichi/omichi01.jpg', alt='omichi01')
+            .col-xs-6
+              a(href='img/va/omichi/omichi01b.jpg', target='new')
+                img.img-thumbnail(src='img/va/omichi/omichi01b.jpg', alt='omichi01b')
+            .text-center
+              p
+                | for
+                strong  Omichi
+                br
+                | 2013
+      // forVA
+      #sec_VA.section
+        .slide
+          .text-center
+            p
+              | for
+              strong  Various Artists
+        // yanma_megane
+        .slide.yanma_megane
+          .container-xs
+            .col-xs-12
+              a(href='img/signal/megane_T.jpg', target='new')
+                img.img-thumbnail(src='img/signal/megane_T.jpg', alt='yanma_megane')
+            .text-center
+              p
+                | for
+                strong  YANMA
+                br
+                | 2015.9 PARTNER@新宿FACE
+        // shoko_ssn
+        .slide.shoko_ssn
+          .container-xs
+            .col-xs-12
+              a(href='img/va/shoko_ssn.jpg', target='new')
+                img.img-thumbnail(src='img/va/shoko_ssn.jpg', alt='shoko_ssn')
+            .text-center
+              p
+                | for
+                strong  祥子
+                br
+                | 2014.9 PARTNER@新宿FACE
+        // songs_cafe_pink
+        .slide.sdc2014
+          .container-xs
+            .col-xs-6
+              a(href='img/va/songs_cafe_pink.jpg', target='new')
+                img.img-thumbnail(src='img/va/songs_cafe_pink.jpg', alt='songs_cafe_pink')
+            .col-xs-6
+              a(href='img/va/songs_cafe_pinkT.jpg', target='new')
+                img.img-thumbnail(src='img/va/songs_cafe_pinkT.jpg', alt='songs_cafe_pinkT')
+            .text-center
+              p
+                | for
+                strong  SDC
+                br
+                | 2014.9
+        // lotus
+        //
+          <div class="slide lotus">
+          <div class="container-xs">
+          <div class="col-xs-12">
+          <a href="img/va/lotus.jpg" target="new">
+          <img src="img/va/lotus.jpg" alt="lotus" class="img-thumbnail"/>
+          </a>
+          </div>
+          <div class="text-center">
+          <p>for<strong> lotus</strong>
+          <a href="https://www.facebook.com/HIROKO.handmade.LOTUS/" target="new">
+          <i class="fa fa-facebook-square fa-lg fa-fw animated-hover"></i>
+          </a>
+          </p>
+          </div>
+          </div>
+          </div>
+        // EPIS_1
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/va/EPIS_1.jpg', target='new')
+                img.img-thumbnail(src='img/va/EPIS_1.jpg', alt='EPIS_1')
+            .text-center
+              p
+                strong EPIS logo
+                br
+                | 2013
+        // JMC
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/va/jmc_nextgenerationz.jpg', target='new')
+                img.img-thumbnail(src='img/va/jmc_nextgenerationz.jpg', alt='jnz')
+              p
+                | for
+                strong  JMC next generationz
+                br
+                | 2013.8.31 JMC@渋谷VISION
+        // NaN_T
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/va/NaN_T.jpg', target='new')
+                img.img-thumbnail(src='img/va/NaN_T.jpg', alt='NaN_T')
+              p
+                | for
+                strong  NaN
+                br
+                | 2013.3
+        // determination
+        .slide
+          .container-xs
+            .col-xs-12
+              a(href='img/va/determination.jpg', target='new')
+                img.img-thumbnail(src='img/va/determination.jpg', alt='determination')
+              p
+                | for
+                strong  determination
+                br
+                | 2013.7
+    footer
+      nav#link.animated.bounceInRight.delay_5s.dur_2s(style='opacity: 1;')
+        ul
+          li
+            a(data-toggle='collapse', data-parent='#accordion', href='#sec_Index')
+              i#collapse-icon.fa.fa-bars.fa-2x.fa-fw.animated-hover

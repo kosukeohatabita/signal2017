@@ -30,7 +30,7 @@ gulp.task('gulp:pug', () => {
 });
 
 // riot
-gulp.task('build:riot', () => {
+gulp.task('gulp:riot', () => {
   return browserify({entries: ['./src/app.js']})
     .transform(riotify, { template: 'pug' })
     .bundle()
@@ -55,6 +55,6 @@ gulp.task('watch', ['serve'], () => {
   gulp.watch("./docs/*", () => {
     browsersync.reload();
   });
-  //gulp.watch("./src/**/*.tag", ['build:riot']);
-  gulp.watch("./src/**/*.pug", ['build:pug']);
+  //gulp.watch("./src/**/*.tag", ['gulp:riot']);
+  gulp.watch("./src/**/*.pug", ['gulp:pug']);
 });

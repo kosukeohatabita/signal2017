@@ -50,7 +50,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:js": "babel src/js/ -d docs/js/",
     "build:css": "node-sass src/scss/ -o docs/css/ --output-style compressed",
-    "build:pug": "gulp build:pug",
+    "build:pug": "gulp gulp:pug",
     "watch:js": "babel src/js/ -d docs/js/ -w",
     "watch:css": "node-sass src/scss/ -o docs/css/ -w --output-style compressed",
     "watch:pug": "gulp watch:pug"
