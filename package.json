@@ -1,0 +1,58 @@
+{
+  "name": "signal2017",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kosukeohatabita/signal2017.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kosukeohatabita/signal2017/issues"
+  },
+  "homepage": "https://github.com/kosukeohatabita/signal2017#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.23.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-transform-es2015-classes": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.1.0",
+    "csscomb": "^3.1.7",
+    "csslint": "^1.0.5",
+    "eslint": "^3.15.0",
+    "eslint-plugin-babel": "^4.0.1",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.2.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-riot": "^1.0.6",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11",
+    "node-sass": "^4.5.0",
+    "npm-run-all": "^4.0.1",
+    "pug": "^2.0.0-beta11",
+    "riotify": "^2.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
+  },
+  "scripts": {
+    "start": "npm-run-all build:* watch",
+    "serve": "gulp serve",
+    "watch": "gulp watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:js": "babel src/js/ -d docs/js/",
+    "build:css": "node-sass src/scss/ -o docs/css/ --output-style compressed",
+    "build:pug": "gulp build:pug",
+    "watch:js": "babel src/js/ -d docs/js/ -w",
+    "watch:css": "node-sass src/scss/ -o docs/css/ -w --output-style compressed",
+    "watch:pug": "gulp watch:pug"
+  }
+}
